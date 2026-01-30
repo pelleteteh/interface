@@ -157,5 +157,20 @@ export const useTabsContent = (): TabsSection[] => {
           },
         ]
       : []),
+    {
+      title: 'Leaderboard',
+      href: '/leaderboard',
+      isActive: pathname.startsWith('/leaderboard'),
+    },
+    {
+      title: 'Bridge',
+      href: '/bridge',
+      isActive: pathname.startsWith('/bridge'),
+    },
+    {
+      title: 'Creators',
+      href: '/creators',
+      isActive: pathname.startsWith('/creators'),
+    },
   ]
 }

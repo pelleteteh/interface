@@ -42,6 +42,9 @@ export enum PageType {
   SWAP = '/swap',
   SELL = '/sell',
   PORTFOLIO = '/portfolio',
+  LEADERBOARD = '/leaderboard',
+  BRIDGE = '/bridge',
+  CREATORS = '/creators',
 }
 
 // eslint-disable-next-line import/no-unused-modules -- currently used in a test file

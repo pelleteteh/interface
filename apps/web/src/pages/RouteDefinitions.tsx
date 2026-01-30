@@ -45,6 +45,9 @@ const ExtensionUninstall = lazy(() => import('pages/ExtensionUninstall/Extension
 const Portfolio = lazy(() => import('pages/Portfolio/Portfolio'))
 const ToucanToken = lazy(() => import('pages/Explore/ToucanToken'))
 const Wrapped = lazy(() => import('pages/Wrapped'))
+const Leaderboard = lazy(() => import('pages/Leaderboard/Leaderboard'))
+const Bridge = lazy(() => import('pages/Bridge/Bridge'))
+const Creators = lazy(() => import('pages/Creators/Creators'))
 
 interface RouterConfig {
   browserRouterEnabled?: boolean
@@ -414,6 +417,27 @@ export const routes: RouteDefinition[] = [
     getElement: () => <Wrapped />,
     getTitle: () => 'Uniswap Wrapped',
     enabled: (args) => args.isWrappedEnabled ?? false,
+  }),
+  // Leaderboard Page
+  createRouteDefinition({
+    path: '/leaderboard',
+    getElement: () => <Leaderboard />,
+    getTitle: () => 'Leaderboard',
+    getDescription: () => 'View the Uniswap leaderboard',
+  }),
+  // Bridge Page
+  createRouteDefinition({
+    path: '/bridge',
+    getElement: () => <Bridge />,
+    getTitle: () => 'Bridge',
+    getDescription: () => 'Bridge tokens across chains',
+  }),
+  // Creators Page
+  createRouteDefinition({
+    path: '/creators',
+    getElement: () => <Creators />,
+    getTitle: () => 'Creators',
+    getDescription: () => 'Uniswap Creators Program',
   }),
   createRouteDefinition({ path: '*', getElement: () => <Navigate to="/not-found" replace /> }),
   createRouteDefinition({ path: '/not-found', getElement: () => <NotFound /> }),

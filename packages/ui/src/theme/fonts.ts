@@ -20,16 +20,16 @@ const adjustedSize = (fontSize: number): number => {
 // on web, it's the full family name in the file
 const fontFamilyByPlatform = {
   android: {
-    medium: 'Basel-Grotesk-Medium',
-    book: 'Basel-Grotesk-Book',
+    medium: 'PoppinsRounded-Rounded',
+    book: 'PoppinsRounded-Rounded',
   },
   ios: {
-    medium: 'Basel Grotesk',
-    book: 'Basel Grotesk',
+    medium: 'Poppins Rounded',
+    book: 'Poppins Rounded',
   },
   web: {
-    medium: 'Basel Grotesk Medium',
-    book: 'Basel Grotesk Book',
+    medium: 'Poppins Rounded',
+    book: 'Poppins Rounded',
   },
 }
 
@@ -46,11 +46,11 @@ const fontFamily = {
 }
 
 const baselMedium = isWebPlatform
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ? 'Poppins Rounded, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : fontFamily.sansSerif.medium
 
 const baselBook = isWebPlatform
-  ? 'Basel, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
+  ? 'Poppins Rounded, -apple-system, system-ui, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif'
   : fontFamily.sansSerif.book
 
 const monospaceFontFamily = isWebPlatform
